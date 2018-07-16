@@ -20,6 +20,9 @@ By default, Augur Node is configured to connect to a locally-running Ethereum no
     $ export ETHEREUM_HTTP=https://rinkeby.ethereum.nodes.augur.net 
     $ export ETHEREUM_WS=wss://websocket-rinkeby.ethereum.nodes.augur.net
 
+If running GETH locally over websockets, ensure to allow calls originating from Augur and not to leave the gas price RPC method  undefined
+    $ EXAMPLE: geth --rpc --ws --wsorigins='*' --gasprice "18000000000" console 
+
 ### Starting
 
 For a quick start, use the `clean-start` script included with our package.json:
